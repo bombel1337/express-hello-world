@@ -1,0 +1,815 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+:root {
+  --darkGrey: rgb(30, 32, 34);
+  --lightGrey: rgb(58, 58, 58);
+  --lightOffGrey: rgb(157, 158, 158);
+  --offWhite: rgb(219, 219, 219);
+}
+
+* {
+  transition: 200ms;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+}
+
+/* style nawigacji mobilnej */
+.burger {
+  position: fixed;
+  top: 3rem;
+  right: 3rem;
+  background-color: #000;
+  color: #fff;
+  font-size: 4rem;
+  padding: 2rem 1rem 1.9rem;
+  cursor: pointer;
+  display: none;
+  z-index: 2;
+}
+
+.nakladka {
+  position: fixed;
+  right: 0;
+  background-color: var(--lightOffGrey);
+  color: var(--offWhite);
+
+  height: 0;
+  width: 100%;
+  /*docelowo zmieniamy na 0*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  opacity: 0.9;
+  overflow: hidden;
+  /*elementy wystaj?ce poza box nie b?d? widoczne*/
+}
+
+.nakladka ol {
+  width: 100%;
+}
+
+.nakladka ol li a {
+  color: #fff;
+  font-size: 8vw;
+  font-weight: 900;
+  display: block;
+  padding: 6vw;
+  text-align: center;
+}
+
+.nakladka ol li a:hover {
+  background-color: #fff;
+  color: var(--lightOffGrey);
+}
+
+.zamknijX {
+  position: absolute;
+  /* odwo?uje si? po?o?eniem do kontenera nadrzdnego*/
+  top: 4.4rem;
+  right: 3.9rem;
+  font-size: 6rem;
+  color: #fff;
+}
+
+/* style nawigacji desktopowej */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--lightGrey);
+  color: var(--lightOffGrey);
+  position: fixed;
+  width: 100%;
+  max-height: 5vh;
+  padding: 1rem 2rem;
+  z-index: 1;
+}
+
+nav .logo {
+  flex: 0 0 auto;
+  align-items: center;
+}
+
+nav .logo img {
+  width: auto;
+  margin-right: 90px;
+  height: 50px;
+  margin-bottom: 5px;
+}
+
+nav ol {
+  flex-grow: 1;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+nav li {
+  width: auto;
+  text-align: center;
+}
+
+nav ol li a {
+  padding: 1rem 3vw;
+  color: var(--offWhite);
+  display: block;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  transition: background-color 250ms, color 250ms;
+}
+
+nav ol li a:hover {
+  background-color: var(--offWhite);
+  color: var(--darkGrey);
+}
+
+section {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Noto Sans", sans-serif;
+  scroll-margin-top: 60px;
+}
+
+.zawartosc {
+  max-width: 1200px;
+}
+
+.slider,
+.slider .imgs {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.slider {
+  height: 75%;
+  max-height: 100vh;
+}
+
+.slider .imgs {
+  display: flex;
+  overflow: hidden;
+}
+
+.slider .img {
+  display: flex;
+  overflow: hidden;
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 100%;
+  animation: 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) 0s left;
+  animation-fill-mode: forwards;
+  background-size: cover !important;
+  background-position: center !important;
+  transition: transform 0.6s ease-in-out;
+}
+
+/* Change images here */
+.slider .img:nth-of-type(1) {
+  background: url("../img/home0.avif");
+}
+
+.slider .img:nth-of-type(2) {
+  background: url("../img/home1.avif");
+}
+
+.slider .img:nth-of-type(3) {
+  background: url("../img/home2.avif");
+}
+
+.slider .img:nth-of-type(4) {
+  background: url("../img/home3.avif");
+}
+
+.slider-text {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 3vw;
+  line-height: 4vw;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  color: var(--offWhite);
+  border-radius: 2rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: grayscale(80%);
+  /* backdrop-filter: blur(10px); */
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  transition: transform 250ms, box-shadow 250ms;
+}
+
+.slider-text a {
+  font-family: "Righteous", cursive;
+
+  color: var(--offWhite);
+}
+
+.slider-text a:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+  cursor: pointer;
+  transition: 300ms 0 300ms;
+  /* background-color: var(--offWhite); */
+  color: var(--darkGrey);
+}
+
+.dots {
+  position: absolute;
+  bottom: 20px;
+  /* Adjust the value as needed */
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  transform: translateY(-50%);
+  /* Push the dots up by 50% of their height */
+}
+
+.dot {
+  width: 12px;
+  /* Increase the width of the dots */
+  height: 12px;
+  /* Increase the height of the dots */
+  background: var(--lightGrey);
+  border-radius: 50%;
+  margin: 0 5px;
+  /* Adjust the spacing between dots as needed */
+  cursor: pointer;
+}
+
+.active-dot {
+  background: var(--darkGrey);
+  cursor: default;
+}
+
+@keyframes leftNext {
+  from {
+    left: 100%;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+@keyframes leftCurr {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes rightNext {
+  from {
+    left: -100%;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+@keyframes rightCurr {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+/* flota */
+#flota {
+  background-color: #f4f4f4;
+  /* padding: 50px; */
+  align-items: center;
+
+}
+
+.tiles-container {
+  max-width: 1800px;
+
+  /* height: 80vh; */
+  /* Remove fixed height */
+  justify-content: center;
+  display: flex;
+  width: 95%;
+  flex-wrap: wrap;
+
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.tile {
+  margin: 10px;
+  flex-direction: column;
+  height: auto;
+  min-width: 25%;
+  box-sizing: border-box;
+  display: flex;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(58, 58, 58, 0.1);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.tile img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.tile:hover {
+  transform: scale(1.1);
+}
+
+.tile:not(:hover) {
+  transform: scale(1);
+}
+
+.speed-content {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.tile-content {
+  padding: 5px;
+  font-family: "Bree Serif", serif;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 20%;
+}
+
+.column {
+  padding: 5px;
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-style: italic;
+  width: 50%;
+  color: var(--darkGrey);
+
+  font-family: "Montserrat", sans-serif;
+}
+
+.column p {
+  color: var(--lightOffGrey);
+  padding: 3px;
+}
+
+.speed {
+  display: flex;
+  flex-direction: column;
+}
+
+.speed h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  color: var(--darkGrey);
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.name {
+  float: left;
+  color: var(--darkGrey);
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  margin-left: 10px;
+  font-style: italic;
+}
+
+.speed p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: var(--darkGrey);
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+/* onas */
+#onas {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+.title {
+  font-family: "Bree Serif", serif;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 4rem;
+  text-align: center;
+  margin: 55px 0;
+}
+
+#onas .wrapper {
+  max-width: 1500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#onas .row {
+  margin: 25px 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#onas .row__item {
+  max-width: 800px;
+  flex-basis: 45%;
+  display: flex;
+  justify-content: center;
+}
+
+#onas .text {
+  flex-direction: column;
+  color: var(--lightGrey);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+}
+#onas .underline {
+  text-decoration: underline;
+  font-weight: 500;
+  color: var(--lightGrey);
+
+}
+#onas .underline:hover {
+  cursor:pointer;
+  color: var(--darkGrey);
+}
+#onas .text h4 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: var(--darkGrey);
+  font-family: "Montserrat", sans-serif;
+}
+
+#onas .jpg img {
+  width: 80%;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+
+
+}
+
+#onas .card {
+  background-color: #f2f2f2;
+  padding: 15px 30px;
+  box-shadow: 0 2px 4px rgba(58, 58, 58, 0.1);
+  width: auto;
+  border-radius: 8px;
+  margin: 0 20px;
+}
+#onas .space {
+  justify-content: center;
+}
+#onas .cards {
+  margin: 0;
+  width: 100%;
+  margin: 40px 0px;
+}
+#onas .card__title {
+  color: var(--lightGrey);
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+#onas .card__subtitle {
+  font-size: 1.7rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+
+/* jaktodziala */
+#jaktodziala {
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: flex-start;
+}
+#jaktodziala .card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 1200px;
+  margin-bottom: 100px;
+}
+
+#jaktodziala h2 {
+  margin: 150px 0;
+  letter-spacing: 2px;
+
+  width: 100%;
+}
+#jaktodziala .card {
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background-color: #fff;
+  margin: 10px 20px;
+  box-shadow: 0 2px 4px rgba(58, 58, 58, 0.1);
+  border-radius: 10px;
+}
+#jaktodziala .card h4 {
+  letter-spacing: 1.2px;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 500;
+  color: var(--darkGrey);
+  font-family: "Righteous", cursive;
+}
+
+#jaktodziala .card p {
+  font-size: 1.6rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+  text-align: center;
+    align-items: center;
+  justify-content: center;
+  align-items: center;
+  color: var(--lightGrey);
+}
+/* newsletter */
+#newsletter {
+  min-height: 10vh;
+  background-color:var(--darkGrey);
+}
+/* kontakt  */
+#kontakt {
+  min-height: 40vh;
+  /* background-color: #fff; */
+  background-color: var(--offWhite);
+}
+
+#kontakt .zawartosc {
+  display: grid;
+  /* Change flex to grid */
+  grid-template-columns: repeat(2, 1fr);
+  /* Set two columns by default */
+  max-width: 1200px;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+#kontakt article {
+  margin: 2rem;
+  text-align: center;
+}
+
+#second-article #social h6 {
+  margin-top: 8rem;
+}
+
+#kontakt article h6 {
+  font-size: 1.8rem;
+  margin-bottom: 1.6rem;
+  margin-top: 5rem;
+  font-style: bold;
+  text-transform: uppercase;
+  font-family: "Bree Serif", serif;
+  color: var(--lightGrey);
+}
+
+#kontakt article ol {
+  padding-left: 0;
+  margin-top: 0;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+#kontakt article li {
+  margin-bottom: 0.5rem;
+}
+
+#kontakt article a {
+
+  color: var(--lightGrey);
+  text-decoration: none;
+  margin-right: 0.5rem;
+}
+#kontakt .regulamin {
+  text-decoration: underline;
+  margin: 0;
+  color: black;
+  font-weight: 600;
+}
+#kontakt form main input,
+form main textarea {
+  font-family: "Noto Sans", sans-serif;
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1.2rem;
+}
+
+#kontakt form textarea {
+  height: 120px;
+}
+
+#kontakt form div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+#kontakt form label {
+  font-size: 0.9rem;
+}
+
+#kontakt form footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+#kontakt form input[type="reset"],
+form input[type="submit"] {
+  font-family: "Noto Sans", sans-serif;
+  padding: 0.6rem 1rem;
+  background-color: var(--darkGrey);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+#kontakt form input[type="submit"]:hover,
+#kontakt form input[type="reset"]:hover {
+  background-color: var(--lightOffGrey);
+}
+
+#kontakt form main input::placeholder,
+#kontakt form main textarea::placeholder {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.2rem;
+  color: var(--lightGrey);
+  font-style: italic;
+  font-weight: 500;
+}
+
+#kontakt #Copyright {
+  grid-column: 1/3;
+  /* Span across both columns */
+  text-align: center;
+  /* Center the copyright text */
+  margin-top: 3rem;
+  /* Add some top margin */
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+  color: var(--lightOffGrey);
+}
+
+#kontakt #social a {
+  color: var(--darkGrey);
+  text-decoration: none;
+  margin-right: 0.5rem;
+}
+
+#kontakt #social a:hover {
+  transition: 0s;
+  color: var(--lightOffGrey);
+}
+
+#kontakt #social i {
+  font-size: 5rem;
+  margin-right: 1.5rem;
+}
+
+/* STYLE RESPONSYWNE */
+@media all and (max-width: 600px) {
+  .tile {
+    max-width: 90%;
+  }
+}
+@media all and (max-width: 700px) {
+  nav {
+    display: none;
+  }
+
+  section {
+    min-height: 100vh;
+    scroll-margin-top: 0px;
+    /* scroll-margin-top: 0; */
+  }
+  #onas .row {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  #onas .jpg img {
+    display: none;
+  }
+  #onas .row:nth-child(3) {
+    display: flex;
+    flex-direction: row;
+  }
+  #onas .card {
+    width: 20vw;
+  }
+  #onas .delete {
+    width: 0;
+    padding: 0;
+    margin: 0;
+    display: none;
+  }
+  #jaktodziala .card-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+    margin-bottom: 100px;
+  }
+  #jaktodziala .card h4 {
+    font-size: 1.8rem;
+  }
+
+  #jaktodziala .card p {
+    font-size: 1.4rem;
+  }
+
+  #kontakt .zawartosc {
+    display: flex;
+    flex-direction: column;
+  }
+  #social {
+    margin-left: 10px;
+  }
+  #dane-kontaktowe {
+    margin-right: 10px;
+  }
+  #dane-kontaktowe h6, #social h6 {
+    margin-top: 20px !important;
+    
+  }
+
+  #second-article {
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  .slider .img {
+    background-position: calc(100%- 100vh) !important;
+  }
+
+  .tile {
+    min-width: 90%;
+  }
+}
+
+@media all and (max-width: 900px) {
+  nav .logo {
+    display: none;
+  }
+
+  .tile {
+    width: 45%;
+  }
+}

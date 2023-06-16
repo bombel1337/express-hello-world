@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Znacznik odpowiadający za prawidłowe skalowanie dokumentu na urządzeniach mobilnych -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta charset="UTF-8">
+  <title>Prestige Wheels</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles2.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel = "icon" href = 
+  "./img/blacknobg.svg" 
+          type = "image/x-icon">
+</head>
+
+<body>
+
+
+  <!-- NAWIGACJA MOBILE -->
+  <div class="nakladka" id="MENU">
+    <a href="javascript:void(0)" class="zamknijX" onClick="zamknijMenu()">
+      &times;
+    </a>
+    <ol>
+      <li><a href="#home" onClick="zamknijMenu()">Home</a></li>
+      <li><a href="#flota" onClick="zamknijMenu()">Flota</a></li>
+      <li><a href="#onas" onClick="zamknijMenu()">O nas</a></li>
+      <li><a href="#jaktodziala" onClick="zamknijMenu()">Jak to dziala</a></li>
+      <li><a href="#kontakt" onClick="zamknijMenu()">Kontakt</a></li>
+    </ol>
+  </div>
+  <span class="burger" onClick="otworzMenu()">
+    &#9776;
+  </span>
+
+
+
+  <nav>
+
+    <ol>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#flota">Flota</a></li>
+      <li><a href="#onas">O nas</a></li>
+      <li><a href="#jaktodziala">Jak to dziala</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ol>
+    <div class="logo">
+      <a href="#home">
+        <img src="img/whitenobg.svg" alt="Logo">
+      </a>
+    </div>
+  </nav>
+
+  <section id="home">
+    <div class="slider">
+      <div class="imgs">
+        <!-- you can add divs with class img here and they will be 
+                   automatically added to slider -->
+        <!-- style="left: 0;" in case JS is disabled -->
+        <div class="img" style="left: 0;">
+
+        </div>
+        <div class="img">
+
+        </div>
+        <div class="img">
+
+        </div>
+        <div class="img">
+
+        </div>
+      </div>
+      <div class="text-overlay">
+        <div class="slider-text">
+          <a href="#flota">be PRESTIGE</a>
+          <!-- <p>Subtitle or additional text</p> -->
+        </div>
+      </div>
+      <div class="dots"></div>
+    </div>
+  </section>
+
+  <section id="flota">
+    <div class="tiles-container">
+      <div class="tile">
+        <a href="./img/ferari.png" target="_blank">
+          <img src="./img/ferari.png" alt="Image 1">
+        </a>
+        <div class="full-row name-content">
+          <div class="name">Ferrari 458</div>
+        </div>
+        <div class="speed-content">
+          <div class="speed">
+            <h1>od 449zł</h1>
+            <p>cena netto/doba przy 30dniach</p>
+          </div>
+
+        </div>
+        <div class="tile-content">
+          <div class="column">
+            <p>3,9 s do 100 km/h</p>
+            <p>500 KM / 600 Nm</p>
+          </div>
+          <div class="column">
+            <p>Automat</p>
+            <p>2 siedzenia</p>
+          </div>
+        </div>
+      </div>
+      <div class="tile">
+        <a href="./img/rollsghost.png" target="_blank">
+          <img src="./img/rollsghost.png" alt="Image 2">
+        </a>
+        <div class="full-row name-content">
+          <div class="name">Rolls Royce Ghost I</div>
+        </div>
+        <div class="full-row speed-content">
+          <div class="speed">
+            <h1>od 899zł</h1>
+            <p>cena netto/doba przy 30dniach</p>
+          </div>
+
+        </div>
+        <div class="tile-content">
+          <div class="column">
+            <p>8,2 s do 100 km/h</p>
+            <p>480 KM / 580 Nm</p>
+          </div>
+          <div class="column">
+            <p>Automat</p>
+            <p>4 siedzenia</p>
+          </div>
+        </div>
+      </div>
+      <div class="tile">
+        <a href="./img/bmw7.png" target="_blank">
+          <img src="./img/bmw7.png" alt="Image 3">
+        </a>
+        <div class="full-row name-content">
+          <div class="name">BMW 720d</div>
+        </div>
+        <div class="speed-content">
+          <div class="speed">
+            <h1>od 539zł</h1>
+            <p>cena netto/doba przy 30dniach</p>
+          </div>
+
+        </div>
+        <div class="tile-content">
+          <div class="column">
+            <p>5,0 s do 100 km/h</p>
+            <p>420 KM / 550 Nm</p>
+          </div>
+          <div class="column">
+            <p>Automat</p>
+            <p>4 siedzenia</p>
+          </div>
+        </div>
+      </div>
+      <div class="tile">
+        <a href="./img/maseratighibli.png" target="_blank">
+          <img src="./img/maseratighibli.png" alt="Image 1">
+        </a>
+        <div class="full-row name-content">
+          <div class="name">Maserati Ghibli</div>
+        </div>
+        <div class="speed-content">
+          <div class="speed">
+            <h1>od 399zł</h1>
+            <p>cena netto/doba przy 30dniach</p>
+          </div>
+
+        </div>
+        <div class="tile-content">
+          <div class="column">
+            <p>6,8 s do 100 km/h</p>
+            <p>240 KM / 430 Nm</p>
+          </div>
+          <div class="column">
+            <p>Manual</p>
+            <p>4 siedzenia</p>
+          </div>
+        </div>
+      </div>
+      <div class="tile">
+        <a href="./img/lambgallardo.png" target="_blank">
+          <img src="./img/lambgallardo.png" alt="Image 2">
+        </a>
+        <div class="full-row name-content">
+          <div class="name">Lamborghini Gallardo</div>
+        </div>
+        <div class="speed-content">
+          <div class="speed">
+            <h1>od 849zł</h1>
+            <p>cena netto/doba przy 30dniach</p>
+          </div>
+
+
+        </div>
+        <div class="tile-content">
+          <div class="column">
+            <p>2,9 s do 100 km/h</p>
+            <p>740 KM / 800 Nm</p>
+          </div>
+          <div class="column">
+            <p>Automat</p>
+            <p>2 siedzenia</p>
+          </div>
+        </div>
+      </div>
+      <div class="tile">
+        <a href="./img/audia6.png" target="_blank">
+          <img src="./img/audia6.png" alt="Image 3">
+        </a>
+        <div class="full-row name-content">
+          <div class="name">Audi A6</div>
+        </div>
+        <div class="speed-content">
+          <div class="speed">
+            <h1>od 249zł</h1>
+            <p>cena netto/doba przy 30dniach</p>
+          </div>
+
+        </div>
+        <div class="tile-content">
+          <div class="column">
+            <p>8,7 s do 100 km/h</p>
+            <p>140 KM / 200 Nm</p>
+          </div>
+          <div class="column">
+            <p>Manual</p>
+            <p>4 siedzenia</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more tiles as needed -->
+    </div>
+  </section>
+
+ <section id="onas">
+    <h2 class="title">Dlaczego my?</h2>
+    <div class="wrapper">
+      <div class="row">
+        <div class="row__item text">
+          <h4>Wspólna pasja
+          </h4>
+          <p>
+            Działamy szybko jak Nissan GT-R. Mamy tyle energii, co Dodge Challenger. A o swoich usługach myślimy
+            nowocześnie niczym Porsche o wyposażeniu 911. Jesteśmy ekspertami motoryzacji premium, którzy każdego dnia
+            zachwycają się jej wyjątkowością.
+            <br><br>
+            Pragniemy podarować Ci niezapomniane doświadczenie. Właśnie dlatego zapraszamy Cię do świata pełnego
+            adrenaliny, zachwytu i szampańskiej zabawy. Ten świat tworzą najszybsze i najpotężniejsze samochody: teraz
+            dostępne na kilka Twoich kliknięć. To co – ruszasz z nami?
+          </p>
+
+        </div>
+        <div class="row__item jpg">
+          <a href="./img/hypecars.png" target="_blank">
+            <img src="./img/hypecars.png" alt="Image 3">
+          </a>
+
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="row__item jpg">
+          <a href="./img/urus.png" target="_blank">
+            <img src="./img/urus.png" alt="Image 3">
+          </a>
+
+        </div>
+        <div class="row__item text">
+          <h4>Zróżnicowana flota</h4>
+          <p>
+            Od prestiżowego Porsche 911, poprzez potężne BMW M5, aż po unikatowe Audi R8 Preformance Green Hell.
+            Wybieraj spośród najlepszych marek i najbardziej imponujących pojazdów. Dobierz idealny samochód do swoich
+            potrzeb. A jeśli potrzebujesz pomocy –  <a href="#kontakt" class="underline">napisz do nas.</a>
+          </p>
+         
+
+
+        </div>
+      </div> 
+      <div class="row cards space">
+        <div class="row__item">
+          <div class="card">
+            <p class="card__title">4,9</p>
+            <p class="card__subtitle">Średnia ocena<br>naszych usług w Google</p>
+          </div>
+        </div>
+        <div class="row__item space delete">
+          <div class="card">
+            <p class="card__title">2,7</p>
+            <p class="card__subtitle">Najkrótszy czas potrzebny<br>na przyspieszenie do setki</p>
+          </div>
+        </div>
+        <div class="row__item space">
+          <div class="card">
+            <p class="card__title">24/7</p>
+            <p class="card__subtitle">Dostępność<br>naszych usług</p>
+          </div>
+        </div>
+      </div>
+ </section> 
+  <section id="jaktodziala">
+
+    <h2 class="title">Jak to działa?</h2>
+    <div class="card-container">
+      <div class="card jaktodziala">
+        <h4>Wypełnij formularz online</h4>
+        <br>
+        <p>Zarezerwuj swój samochód w Panelu Rezerwacyjnym, zadzwoń, napisz maila lub skontaktuj się z nami poprzez social media – zależnie, która metoda jest dla Ciebie najwygodniejsza. Złożenie rezerwacji zajmie Ci najwyżej kilka minut.</p>
+      </div>
+      <div class="card jaktodziala">
+        <h4>Poczekaj na potwierdzenie</h4>
+        <br>
+       <p>Teraz potwierdzamy rezerwację i przygotowujemy Twój samochód. Daj nam chwilę – właśnie dokładamy wszelkich starań, aby każdy detal zachwycał Cię swoją perfekcją przez całą podróż. Powinieneś otrzymać wiadomość e-mail z informacją o zatwierdzeniu rezerwacji. Zamówione auto możesz odebrać bezpośrednio w naszej siedzibie lub spod wskazanego w zamówieniu adresu.</p>
+      </div>
+      <div class="card jaktodziala">
+        <h4>Odbierz auto i ruszaj w drogę</h4>
+        <br>
+        
+        <p>Wszystko gotowe. Wsiadaj i jedź, dokąd tylko pragniesz. Delektuj się tym doświadczeniem – jest niepowtarzalne. Po wszystkim możesz zwrócić samochód w dowolnym polskim mieście – podaj tylko wcześniej adres, a przyjedziemy po nie.</p>
+      </div>
+
+  </div>
+</div>
+  </section>
+  <section id="newsletter">
+
+  </section>
+  <section id="kontakt">
+    <div class="zawartosc">
+      <article id="first-article">
+        <h6>Skontaktuj się z nami!</h6>
+        <form>
+          <main>
+            <input type="text" placeholder="Imię" required>
+            <input type="text" placeholder="Nazwisko" required>
+            <input type="email" placeholder="E-mail" required>
+            <!-- <input type="password" placeholder="Hasło" disabled> -->
+            <textarea placeholder="Wpisz wiadomość..." required></textarea>
+          </main>
+          <div>
+            <input type="checkbox" required id="zgody">
+            <label for="zgody">Wyrażam zgodę i zapoznałem(am) się z <a class="regulamin" href="#">regulaminem</a>.</label>
+          </div>
+          <footer>
+            <input type="reset" value="Wyczyść">
+            <input type="submit" value="Wyślij">
+          </footer>
+        </form>
+      </article>
+      <article id="second-article">
+        <div id="dane-kontaktowe">
+          <h6>Dane kontaktowe</h6>
+          <ol>
+            <li>ul. Newelska 6</li>
+            <li>00-098 Warszawa</li>
+            <li><a href="callto:+48555222333">+48 555 222 333</a></li>
+            <li><a href="mailto:kontakt@bikeshop.com">kontakt@bikeshop.com</a></li>
+          </ol>
+        </div>
+
+        <div id="social">
+          <h6>Social Media</h6>
+          <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a> <!-- Twitter icon -->
+          <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a> <!-- YouTube icon -->
+          <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a> <!-- Instagram icon -->
+        </div>
+
+      </article>
+      <div id="Copyright">
+        <h4>Copyright © 2023 JP.</h6>
+      </div>
+
+    </div>
+
+  </section>
+  <script>
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 700) {
+        if (document.getElementById("MENU").style.height == "100%") {
+          document.getElementById("MENU").style.height = "0"
+        }
+        document.getElementsByClassName("burger")[0].style.display = "none";
+      } else {
+        if (document.getElementById("MENU").style.height != "100%") {
+          document.getElementsByClassName("burger")[0].style.display = "block";
+
+        }
+      }
+    });
+    /* JavaScript */
+    /* Otwieranie MENU */
+    function otworzMenu() {
+      document.getElementById("MENU").style.height = "100%";
+      document.getElementsByClassName("burger")[0].style.display = "none"
+    }
+
+    /* Zamykanie MENU */
+    function zamknijMenu() {
+      document.getElementById("MENU").style.height = "0";
+      document.getElementsByClassName("burger")[0].style.display = "block"
+    }
+
+
+
+    {
+      const sliders = document.querySelectorAll(".slider");
+      // interval between switching images
+      // can't be less than your animation duration in css!
+      const interval = 4800;
+      // if you don't want to first animation last longer than other animations  
+      // set animDuration (in miliseconds) to your value of animation duration in css
+      const animDuration = 600;
+
+      for (let i = 0; i < sliders.length; ++i) {
+        const slider = sliders[i];
+        const dots = slider.querySelector(".dots");
+        const sliderImgs = slider.querySelectorAll(".img");
+
+        let currImg = 0;
+        let prevImg = sliderImgs.length - 1;
+        let intrvl;
+        let timeout;
+
+        // Creates dots and add listeners to them
+        for (let i = 0; i < sliderImgs.length; ++i) {
+          const dot = document.createElement("div");
+          dot.classList.add("dot");
+          dots.appendChild(dot);
+          dot.addEventListener("click", dotClick.bind(null, i), false);
+        }
+
+        const allDots = dots.querySelectorAll(".dot");
+        allDots[0].classList.add("active-dot");
+
+        sliderImgs[0].style.left = "0";
+        timeout = setTimeout(() => {
+          animateSlider();
+          sliderImgs[0].style.left = "";
+          intrvl = setInterval(animateSlider, interval);
+        }, interval - animDuration);
+
+        /**
+         * Animates images
+         * @param {number} [nextImg] - index of next image to show
+         * @param {boolean} [right = false] - animate to right
+         */
+        function animateSlider(nextImg, right) {
+          if (!nextImg)
+            nextImg = currImg + 1 < sliderImgs.length ? currImg + 2 : 1;
+
+          --nextImg;
+          sliderImgs[prevImg].style.animationName = "";
+
+          if (!right) {
+            sliderImgs[nextImg].style.animationName = "leftNext";
+            sliderImgs[currImg].style.animationName = "leftCurr";
+          }
+          else {
+            sliderImgs[nextImg].style.animationName = "rightNext";
+            sliderImgs[currImg].style.animationName = "rightCurr";
+          }
+
+          prevImg = currImg;
+          currImg = nextImg;
+
+          currDot = allDots[currImg];
+          currDot.classList.add("active-dot");
+          prevDot = allDots[prevImg];
+          prevDot.classList.remove("active-dot");
+        }
+
+        /**
+         * Decides if animate to left or right and highlights clicked dot
+         * @param {number} num - index of clicked dot
+         */
+        function dotClick(num) {
+          if (num == currImg)
+            return false;
+
+          clearTimeout(timeout);
+          clearInterval(intrvl);
+
+          if (num > currImg)
+            animateSlider(num + 1);
+          else
+            animateSlider(num + 1, true);
+
+          intrvl = setInterval(animateSlider, interval);
+        }
+      }
+    }
+
+
+  </script>
+</body>
+
+</html>
